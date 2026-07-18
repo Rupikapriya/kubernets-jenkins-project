@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "karrirupika/myapp"
+        IMAGE_NAME = "karrirupika/myapp26"
         IMAGE_TAG  = "latestfrst"
     }
 
@@ -23,7 +23,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t :${IMAGE_TAG} .'
+                sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
             }
         }
 
