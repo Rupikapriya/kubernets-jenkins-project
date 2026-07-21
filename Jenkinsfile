@@ -44,7 +44,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                sh 'docker push karrirupika/myname:latestfrst'
+                sh 'docker push ${IMAGE_NAME}:${IMAGE_TAG}'
             }
         }
 
